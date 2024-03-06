@@ -1,0 +1,103 @@
+Create a Table
+
+In this project, you will create your own friends table and add/delete data from it! The instructions provided are a general guideline. Feel free to add more columns, insert more data, and create more tables.
+
+
+1. Create a table named friends with three columns:
+
+* id that stores INTEGER
+* name that stores TEXT
+* birthday that stores DATE
+
+Code: 
+
+CREATE TABLE friends(
+  id INTERGER,
+  name TEXT,
+  birthday DATE
+);
+
+
+2. Beneath your current code, add Ororo Munroe to friends.
+
+* Her birthday is May 30th, 1940.
+
+Code:
+
+INSERT INTO friends (id, name, birthday)
+VALUES (1, 'Ororo Munroe', '1940-05-30');
+
+
+
+3. Let’s make sure that Ororo has been added to the database:
+
+" SELECT * 
+FROM friends; " 
+
+Check for two things:
+
+* Is friends table created?
+* Is Ororo Munroe added to it?
+
+
+4. Let’s move on!
+
+* Add two of your friends to the table.
+* Insert an id, name, and birthday for each of them.
+
+Code:
+
+INSERT INTO friends(id, name, birthday)
+VALUES (2, 'Valeria', '2000-08-25');
+
+INSERT INTO friends (id, name, birthday)
+VALUES (3, 'Jose', '2002-06-13');
+
+
+
+
+5. Ororo Munroe just realized that she can control the weather and decided to change her name. Her new name is “Storm”.
+
+* Update her record in friends.
+
+Code:
+
+UPDATE friends
+SET name = 'Storm'
+WHERE id = 1;
+
+
+6. Add a new column named email.
+
+Code:
+
+ALTER TABLE friends
+ADD COLUMN email TEXT;
+
+
+7. Update the email address for everyone in your table.
+
+* Storm’s email is storm@codecademy.com.
+
+Code:
+
+UPDATE friends
+SET email = 'storm@cidecademy.com'
+WHERE id = 1;
+
+
+8. Wait, Storm is fictional…
+
+* Remove her from friends.
+
+Code:
+
+DELETE FROM friends
+WHERE id = 1;
+
+
+9. Great job! Let’s take a look at the result one last time:
+
+" SELECT * 
+FROM friends; "
+
